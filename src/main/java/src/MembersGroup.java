@@ -1,15 +1,18 @@
 package src;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-
 import java.util.List;
 
-@Getter
-@AllArgsConstructor
+
 public class MembersGroup {
     private final String groupName;
     private final List<Member> members;
 
+    public MembersGroup(String groupName, List<Member> members) {
+        this.groupName = groupName;
+        this.members = members;
+    }
+
+    public List<Member> getMembers() {
+        return members;
+    }
 }
